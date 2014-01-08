@@ -1,0 +1,78 @@
+@prefix ltw: <http://helheim.deusto.es/ltw/0.1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix do: <http://www.morelab.deusto.es/ontologies/demonstration#> .
+
+<#DemonstrationMap> a ltw:ClassItem ;
+	ltw:javaClass "eu.deustotech.internet.tecnaliaapp.model.Demonstration";
+    ltw:hasPropertyItem 
+        [ ltw:identifier "mantainer" ;
+            ltw:isClickable "true" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#mantainer> ],
+        [ ltw:identifier "name" ;
+            ltw:isClickable "false" ;
+            ltw:isMain "true" ;
+            ltw:ontologyProperty <http://purl.org/dc/elements/1.1/name> ],
+        [ ltw:identifier "developer" ;
+            ltw:isClickable "true" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#developer> ],
+        [ ltw:identifier "evolvedtechnology" ;
+            ltw:isClickable "true" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#evolvedTechnology> ],
+        [ ltw:identifier "relatedindustry" ;
+            ltw:isClickable "true" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#relatedIndustry> ],
+        [ ltw:identifier "relatedproject" ;
+            ltw:isClickable "true" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#relatedProject> ],
+        [ ltw:identifier "description" ;
+            ltw:isClickable "false" ;
+            ltw:ontologyProperty <http://purl.org/dc/elements/1.1/description> ] ;
+    ltw:identifier "Demonstration" ;
+    ltw:ontologyClass <http://www.morelab.deusto.es/ontologies/demonstration#Demonstration> .
+
+<#IndustryMap> a ltw:ClassItem ;
+	ltw:javaClass "eu.deustotech.internet.tecnaliaapp.model.Industry";
+    ltw:hasPropertyItem [ ltw:identifier "name" ;
+            ltw:isClickable "false" ;
+            ltw:isMain "true" ;
+            ltw:ontologyProperty <http://purl.org/dc/elements/1.1/name> ] ;
+    ltw:identifier "Industry" ;
+    ltw:ontologyClass <http://www.morelab.deusto.es/ontologies/demonstration#Industry> .
+
+<#PersonMap> a ltw:ClassItem ;
+	ltw:javaClass "eu.deustotech.internet.tecnaliaapp.model.Person";
+    ltw:hasPropertyItem [ ltw:identifier "name" ;
+            ltw:isClickable "false" ;
+            ltw:isMain "true" ;
+            ltw:ontologyProperty <http://xmlns.com/foaf/0.1/name> ] ;
+    ltw:identifier "Person" ;
+    ltw:ontologyClass <http://xmlns.com/foaf/0.1/Person> .
+
+<#ProjectMap> a ltw:ClassItem ;
+	ltw:javaClass "eu.deustotech.internet.tecnaliaapp.model.Project";
+    ltw:hasPropertyItem [ ltw:identifier "name" ;
+            ltw:isClickable "false" ;
+            ltw:isMain "true" ;
+            ltw:ontologyProperty <http://purl.org/dc/elements/1.1/name> ],
+        [ ltw:identifier "customer" ;
+            ltw:isClickable "false" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#customer> ],
+        [ ltw:identifier "projecttype" ;
+            ltw:isClickable "false" ;
+            ltw:ontologyProperty <http://www.morelab.deusto.es/ontologies/demonstration#projectType> ] ;
+    ltw:identifier "Project" ;
+    ltw:ontologyClass <http://www.morelab.deusto.es/ontologies/demonstration#Project> .
+
+<#TechnologyMap> a ltw:ClassItem ;
+	ltw:javaClass "eu.deustotech.internet.tecnaliaapp.model.Technology";
+    ltw:hasPropertyItem [ ltw:identifier "name" ;
+            ltw:isClickable "false" ;
+            ltw:isMain "true" ;
+            ltw:ontologyProperty <http://purl.org/dc/elements/1.1/name> ] ;
+    ltw:identifier "Technology" ;
+    ltw:ontologyClass <http://www.morelab.deusto.es/ontologies/demonstration#Technology> .
